@@ -43,7 +43,8 @@
 #pragma mark - 属性
 - (UITableView *)tableView {
 	if (!_tableView) {
-		_tableView = [[UITableView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        CGRect screenBounds = [UIScreen mainScreen].bounds;
+		_tableView = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 64.0, screenBounds.size.width, screenBounds.size.height)];
 		_tableView.dataSource = self.dataSource;
 		_tableView.delegate = self.delegate;
 	}
@@ -52,10 +53,15 @@
 
 - (KCTableViewArrayDataSource *)dataSource {
 	if (!_dataSource) {
+        //数据源方法通过block实现
 		_dataSource = [[KCTableViewArrayDataSource alloc] initWithData:self.data
                          cellBlock:^(UITableViewCell *cell, NSString *dataItem, NSIndexPath *indexPath) {
                            cell.textLabel.text = dataItem;
                          }];
+        //更多数据源配置
+//        [_dataSource setNumberOfRowsInSectionBlock:^NSUInteger(NSArray * data, NSInteger section) {
+//            
+//        }];
 	}
 	return _dataSource;
 }
@@ -64,11 +70,16 @@
 	if (!_delegate) {
 		_delegate = [[KCTableViewDelegate alloc] init];
 		__weak typeof(self) weakSelf = self;
+        //代理方法通过block实现
 		[_delegate setSelectRowAtIndexPathBlock:^(id cell, NSIndexPath *indexPath) {
             NSString *controllerName = [NSString stringWithFormat:@"KCAutoHeightTableViewController%ld",indexPath.row + 1];
             UIViewController *autoHeightController = [NSClassFromString(controllerName) new];
             [weakSelf.navigationController pushViewController:autoHeightController animated:YES];
 		}];
+        //更多代理配置
+//        [_delegate setHeightForRowAtIndexPathBlock:^CGFloat(NSIndexPath *indexPath) {
+//            
+//        }];
 	}
 	return _delegate;
 }
