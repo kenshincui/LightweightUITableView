@@ -23,6 +23,7 @@ static NSString *const cellIdentifier = @"KCCardTableViewCell2";
 
 #pragma mark - 私有方法
 - (void)initializer {
+    self.title = @"自动计算行高";
     //如果使用KCTableViewDelegate只需要配置UITableView的autoCellHeight属性为YES即可（当然在定义Cell中需要实现height方法）
     self.tableView.estimatedRowHeight = 300.0;
     self.tableView.autoCellHeight = YES;
