@@ -19,7 +19,9 @@ LightweightUITalbeViewDemo  用于演示LightweightUITalbeView库的使用；
 1. 控制器瘦身
 借助于KCTableViewArrayDataSource和KCTableViewDelegate对象代理控制器视图成为数据源和代理，避免冗余的数据源和代理方法，开发人员只需要关注属配置和必要的代理实现，并且二者均使用block实现，避免同一类方法分散到各处造成维护困扰。并且二者在命名方式上完全和原来的数据源方法、代理方法相对应，开发起来几乎零学习成本。另外为了便于开发，这里除了对应方法的block还提供了很多可以简化开发人员的方法，例如对于"- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath "这个数据源方法，则除了提供对应的“cellForRowAtIndexPathBlock”这个block之外，通常情况下如果只有一组数据、一种cell样式还可以直接使用"cellBlock"来简化数据配置，这个方法除了提供cell对象参数还提供了与之对应的数据项避免开发人员自己去数组中取出对应的模型（更多配置可以参考代码和具体的注释说明）。
 如下示例中，由于在KCTableViewArrayDataSource中默认实现了返回分组数和行数的实现，如果仅仅包含一组数据可以不用实现分组数据源方法，而行数的实现KCTableViewArrayDataSource默认会返回配置的数组的个数，因此开发人员仅仅需要配置"cellForRowAtIndexPathBlock"来配置数据展示（事实上下面的代码中直接使用了默认的构造方法来完成了这个block的配置，代码更加简化）。同样的道理，KCTableViewDelegate则使用block来代理代理方法。
-配置数据源
+
+### 配置数据源
+
 ```objc
         //数据源方法通过block实现
 		_dataSource = [[KCTableViewArrayDataSource alloc] initWithData:self.data
@@ -31,7 +33,9 @@ LightweightUITalbeViewDemo  用于演示LightweightUITalbeView库的使用；
 //            
 //        }];
 ```
-配置代理
+
+### 配置代理
+
 ```objc
         //代理方法通过block实现
 		[_delegate setSelectRowAtIndexPathBlock:^(id cell, NSIndexPath *indexPath) {
@@ -44,9 +48,11 @@ LightweightUITalbeViewDemo  用于演示LightweightUITalbeView库的使用；
 //            
 //        }];
 ```
+
 2. 自动计算Cell高度
  从iOS 8开发人员才能利用"self-sizing cell"自动计算行高，但是这种方式似乎并没有iOS 7那么流畅，因为它会多次计算Cell高度，效率似乎并没有那么高。另外，目前不支持iOS 7还是不太现实的，或者说你还想要兼容更低版本。LightweightUITableView提供了一种更加通用和高效的解决方案。使用UITableView+KC 会让Cell行高计算更加方便（无论你是使用frame还是AutoLayout布局），再配合上KCTableViewDelegate这种实现则更加简洁，使用是直接配置UITableView的autoCellHeight为YES即可（当然建议配置estimatedRowHeight）。UITableView+KC内部会自动在空闲时间预计算Cell高度，并且自动维护行高不会多次计算行高。
  在下面的实例中，仅仅通过几行代码即实现了Cell行高的计算。
+ 
 ```objc
     //如果使用KCTableViewDelegate只需要配置UITableView的autoCellHeight属性为YES即可（当然在定义Cell中需要实现height方法）
     self.tableView.estimatedRowHeight = 300.0;
@@ -60,4 +66,7 @@ LightweightUITalbeViewDemo  用于演示LightweightUITalbeView库的使用；
         cell.seperatorPinToSupperviewMargins = YES;//分割线两端对齐
     }];
 ```
-## 效果
+
+## 演示
+
+![](https://github.com/kenshincui/LightweightUITableView/blob/master/LightweightUITableViewDemo/LightweightUITableViewDemo/Resources/AutoHeightCell.gif?raw=true)
