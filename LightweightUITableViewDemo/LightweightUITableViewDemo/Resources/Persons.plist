@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Miaoer</string>
+		<key>avatarUrl</key>
+		<string>1.jpg</string>
+		<key>introduction</key>
+		<string>Years of software design and development experience, familiar with server-side and client-side development, especially those with deep accumulation in iOS development. IOS has led the development of a number of projects and products, with rich experience in product development and project combat experience. Today&apos;s headlines Deals currently serves as iOS client technology division manager responsible Deals client architecture, design and core development work.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kaoru</string>
+		<key>avatarUrl</key>
+		<string>2.jpg</string>
+		<key>introduction</key>
+		<string>Master UESTC computer science engineering, Changhong system architects, ten years of experience in Java project development, proficient in Java, Python, GoLang, Scala, Node.js, and other programming languages, proficient in Java EE, Spring, workflow, Web Crawler , rules engine, the development of full-text retrieval technology, the main research directions for Web development, distributed computing, clustering technology, Docker technology, NoSQL technology.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tom Xu</string>
+		<key>avatarUrl</key>
+		<string>3.jpg</string>
+		<key>introduction</key>
+		<string>CSDN blog expert, for many years mainly engaged in the development and research of media streaming, network communications, p2p and other technologies. There are no related products, the product is expected to be available in August.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jerry Lee</string>
+		<key>avatarUrl</key>
+		<string>4.jpg</string>
+		<key>introduction</key>
+		<string>Programmers interested in algorithm research, he is super popular CSDN algorithm column blogger (blog), but also &quot;algorithm fun,&quot; a book author. 2005 graduated from Huazhong University of Science and Technology, currently at RD center in Shanghai ZTE optical access network communications equipment development, as EPON (Ethernet Passive Optical Network) business software development manager, participate in the development of PON equipment in the global deployment of billions of dollars line .</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stephon Lee</string>
+		<key>avatarUrl</key>
+		<string>5.jpg</string>
+		<key>introduction</key>
+		<string>IOS has led the development of a number of projects and products, with rich experience in product development and project combat experience. </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Rose</string>
+		<key>avatarUrl</key>
+		<string>6.jpg</string>
+		<key>introduction</key>
+		<string>He graduated from the University of Science and Technology of China, csdn blog expert, 2014 Top Ten blog star. Android engineer, worked in Tencent, innovative workshops and Baidu in the Android development work, currently involved in the development of mobile guards Baidu Baidu&apos;s work.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Jake</string>
+		<key>avatarUrl</key>
+		<string>7.jpg</string>
+		<key>introduction</key>
+		<string>Hujiang network software engineer. Love to share, love geeks programming monster, Coding road is bound to be painful, and ultimately, the collapse of BUG, but so what, even if it can not perform, but also series of beautiful, I am eclipse_xu, I speak for myself, for the program was born, died as demand for Debug and struggle for life!</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Berry</string>
+		<key>avatarUrl</key>
+		<string>8.jpg</string>
+		<key>introduction</key>
+		<string>UMLChina chief expert. In 1999, or a programmer, in his spare time he created UMLChina, painstaking research needs and design skills. 2002 provide external demand and design UML technical guidance and training services, customers covering all areas of business leaders.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Apple</string>
+		<key>avatarUrl</key>
+		<string>9.jpg</string>
+		<key>introduction</key>
+		<string>Years of software design and development experience, familiar with server-side and client-side development, especially those with deep accumulation in iOS development. IOS has led the development of a number of projects and products, with rich experience in product development and project combat experience. Today&apos;s headlines Deals currently serves as iOS client technology division manager responsible Deals client architecture, design and core development work.</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Binger</string>
+		<key>avatarUrl</key>
+		<string>10.jpg</string>
+		<key>introduction</key>
+		<string>July 2009, graduated from Hainan University Communication Engineering bachelor&apos;s degree in engineering. April 2012, graduated from Nanjing University of Posts and Computer Application Technology, a master&apos;s degree in engineering. May 2012 to date, ZTE R D center in Chongqing in software development.</string>
+	</dict>
+</array>
+</plist>
