@@ -1,5 +1,6 @@
 # LightweightUITableView
-![]()
+![](https://github.com/kenshincui/LightweightUITableView/blob/master/LightweightUITableViewDemo/LightweightUITableViewDemo/Resources/cmjLogo180.png?raw=true)
+
 LightweightUITalbeView项目是一个简化UITableView开发的轻量级类库，使用它你可以不用再编写繁杂的数据源和代理方法，可以不用再手动维护可变高度的Cell行高。
 ## 目录
 LightweightUITalbeView      包含整个轻量级UITableview所需要的内容，可以直接copy到项目中使用；

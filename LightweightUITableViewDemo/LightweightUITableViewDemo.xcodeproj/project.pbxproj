@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		91768D191BAE61B000B2C7BF /* cmjLogo180.png in Resources */ = {isa = PBXBuildFile; fileRef = 91768D181BAE61B000B2C7BF /* cmjLogo180.png */; settings = {ASSET_TAGS = (); }; };
+		91768D1B1BAE665E00B2C7BF /* cmjLogo120.png in Resources */ = {isa = PBXBuildFile; fileRef = 91768D1A1BAE665E00B2C7BF /* cmjLogo120.png */; settings = {ASSET_TAGS = (); }; };
 		91C6F7A61BABCBEA00558787 /* KCAutoHeightTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6F7891BABCBEA00558787 /* KCAutoHeightTableViewController1.m */; };
 		91C6F7A71BABCBEA00558787 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6F78B1BABCBEA00558787 /* KCMainViewController.m */; };
 		91C6F7A81BABCBEA00558787 /* KCPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6F78E1BABCBEA00558787 /* KCPerson.m */; };
@@ -55,7 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		91768D181BAE61B000B2C7BF /* cmjLogo180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cmjLogo180.png; sourceTree = "<group>"; };
+		91768D1A1BAE665E00B2C7BF /* cmjLogo120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cmjLogo120.png; sourceTree = "<group>"; };
 		91C6F7881BABCBEA00558787 /* KCAutoHeightTableViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCAutoHeightTableViewController1.h; sourceTree = "<group>"; };
 		91C6F7891BABCBEA00558787 /* KCAutoHeightTableViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCAutoHeightTableViewController1.m; sourceTree = "<group>"; };
 		91C6F78A1BABCBEA00558787 /* KCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		91C6F7931BABCBEA00558787 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				91768D181BAE61B000B2C7BF /* cmjLogo180.png */,
+				91768D1A1BAE665E00B2C7BF /* cmjLogo120.png */,
 				91C6F7941BABCBEA00558787 /* 1.jpg */,
 				91C6F7951BABCBEA00558787 /* 10.jpg */,
 				91C6F7961BABCBEA00558787 /* 2.jpg */,
@@ -376,9 +376,9 @@
 				91C6F7B31BABCBEA00558787 /* 8.jpg in Resources */,
 				91C6F7AD1BABCBEA00558787 /* 2.jpg in Resources */,
 				91F3704E1BABEB3700F5EF25 /* KCCardTableViewCell2.xib in Resources */,
+				91768D1B1BAE665E00B2C7BF /* cmjLogo120.png in Resources */,
 				91C6F7C01BABCC8200558787 /* Info.plist in Resources */,
 				91DA2CDC1BAAAF34004D3F41 /* Images.xcassets in Resources */,
-				91768D191BAE61B000B2C7BF /* cmjLogo180.png in Resources */,
 				91C6F7B41BABCBEA00558787 /* 9.jpg in Resources */,
 				91C6F7AC1BABCBEA00558787 /* 10.jpg in Resources */,
 				91C6F7AF1BABCBEA00558787 /* 4.jpg in Resources */,
