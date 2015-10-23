@@ -26,6 +26,11 @@
  */
 @property(assign, nonatomic) Class cellClass;
 
+/**
+ *  和上面的cellClass互斥，仅仅用于autoCellHeight为YES时动态创建cell并计算高度使用，通常情况下使用不到
+ */
+@property (copy,nonatomic) NSString *nibName;
+
 @property(assign, nonatomic) UITableViewCellStyle cellStyle;
 
 /**

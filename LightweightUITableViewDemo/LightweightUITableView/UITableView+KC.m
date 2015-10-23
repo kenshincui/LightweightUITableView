@@ -11,6 +11,7 @@
 #import "UIView+KC.h"
 #import "UITableViewCell+KC.h"
 #import "KCTableViewArrayDataSource.h"
+#import "KCTableViewDelegate.h"
 @import ObjectiveC;
 
 @implementation UITableView (KC)
@@ -54,18 +55,21 @@ static long kKCAutoCellHeightKey;
 			NSLog(@"计算高度过程中发生错误，错误详情：使用高度自适应功能必须配合KCTableViewArrayDataSource使用.");
 			return 0.0;
 		}
+        if (![self.delegate isKindOfClass:[KCTableViewDelegate class]]) {
+            NSLog(@"计算高度过程中发生错误，错误详情：使用高度自适应功能必须配合KCTableViewDelegate使用.");
+            return 0.0;
+        }
 		KCTableViewArrayDataSource *dataSource = (KCTableViewArrayDataSource *)self.dataSource;
+        KCTableViewDelegate *delegate = (KCTableViewDelegate *)self.delegate;
 		if (dataSource.cellBlock) {
-			static NSString *identtityKey = @"myTableViewCellIdentityKey1";
-			UITableViewCell *cell = [self dequeueReusableCellWithIdentifier:dataSource.reuseIdentifier ? dataSource.reuseIdentifier : identtityKey];
-			if (cell == nil) {
-				if (dataSource.cellClass) {
-					cell = [[dataSource.cellClass alloc] initWithStyle:dataSource.cellStyle reuseIdentifier:identtityKey];
-				} else {
-					cell = [[UITableViewCell alloc] initWithStyle:dataSource.cellStyle reuseIdentifier:identtityKey];
-				}
-			}
-			[cell prepareForReuse];
+			UITableViewCell *cell;
+            if (dataSource.cellClass) {
+                cell = [[dataSource.cellClass alloc] init];
+            } else if(dataSource.nibName){
+                cell = [[[NSBundle mainBundle] loadNibNamed:dataSource.nibName owner:nil options:nil] firstObject];
+            } else {
+                cell = [[UITableViewCell alloc] init];
+            }
 			id item;
 			if (dataSource.data && dataSource.data.count > 0) {
 				if (dataSource.sectionCount == 1 && dataSource.data.count > indexPath.row) {
@@ -80,11 +84,11 @@ static long kKCAutoCellHeightKey;
 
 			height = cell.height;
 
-		} else if (dataSource.cellForRowAtIndexPathBlock) {
-			UITableViewCell *cell = dataSource.cellForRowAtIndexPathBlock(self, indexPath);
-			[cell prepareForReuse];
-			height = cell.height;
-		}
+		} else if (delegate.heightForRowAtIndexPathBlock) {
+            height = delegate.heightForRowAtIndexPathBlock(indexPath);
+        } else {
+            NSLog(@"未配置cellConfigHandler的情况下请自行实现“tableView:heightForRowAtIndexPath:”计算高度！");
+        }
 
 		[self cacheHeightStoreWithIndexPath:indexPath height:height];
 		//		self.heightStore[indexPath.section][indexPath.row] = @(height);

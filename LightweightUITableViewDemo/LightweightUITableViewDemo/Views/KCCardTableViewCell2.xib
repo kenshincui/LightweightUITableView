@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -16,6 +16,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgp-Hc-uon">
                         <rect key="frame" x="8" y="8" width="100" height="100"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="Fvz-SY-fgb"/>
                             <constraint firstAttribute="height" constant="100" id="tIb-x4-lZi"/>
@@ -23,6 +24,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OO1-f4-mpC">
                         <rect key="frame" x="116" y="8" width="196" height="21"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="yTI-Xx-mqX"/>
                         </constraints>
@@ -32,11 +34,13 @@
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xN-6y-bfT">
                         <rect key="frame" x="116" y="29" width="196" height="114"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="0xN-6y-bfT" secondAttribute="bottom" constant="8" id="A1u-9K-3ea"/>
                     <constraint firstAttribute="trailing" secondItem="0xN-6y-bfT" secondAttribute="trailing" constant="8" id="Aw7-Ua-QW1"/>
@@ -49,6 +53,7 @@
                     <constraint firstAttribute="trailing" secondItem="OO1-f4-mpC" secondAttribute="trailing" constant="8" id="v4O-bW-cfP"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="avatarImageView" destination="hgp-Hc-uon" id="iuZ-Y0-qNJ"/>
                 <outlet property="introductionLabel" destination="0xN-6y-bfT" id="hqa-nS-dCd"/>

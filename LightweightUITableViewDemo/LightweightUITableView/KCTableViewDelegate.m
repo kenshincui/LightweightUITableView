@@ -84,12 +84,13 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	if (self.heightForRowAtIndexPathBlock) {
-		return self.heightForRowAtIndexPathBlock(indexPath);
-	}
 	if (tableView.autoCellHeight) {
 		return [tableView heightWithIndexPath:indexPath];
 	}
+	if (self.heightForRowAtIndexPathBlock) {
+		return self.heightForRowAtIndexPathBlock(indexPath);
+	}
+
 	return tableView.rowHeight;
 }
 

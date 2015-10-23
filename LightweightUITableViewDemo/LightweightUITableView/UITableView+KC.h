@@ -13,9 +13,9 @@
  *
  *  使用：
  *  1.设置autoCellHeight=YES
- *  2.在tableView:heightForRowAtIndexPath:代理方法中调用heightWithIndexPath:返回高度
+ *  2.在tableView:heightForRowAtIndexPath:代理方法中调用heightWithIndexPath:返回高度（注意不要在次方中调用tableView:cellForRowAtIndexPath:，因为里面可能从缓存池取数据造成缓存池增大，也不要使用带有reuseIdentifier的构造方法创建cell以免在计算完高度后无法立即释放，建议使用无参构造方法创建cell并且指定模型返回高度）
  *  3.为了更有效的预缓存高度建议使用之前设置UITableView的estimatedRowHeight属性
- *  4.如果UITableView的代理为KCTableViewDelegate则可以省略第2步
+ *  4.如果UITableView的代理为KCTableViewDelegate并且实现了cellConfigHandler（单Cell种类情况）则可以省略第2步
  *  注意：
  *  1.cell必须实现height方法才能正确计算高度，推荐使用方式：
  *    a.如果仅仅支持iOS8可以直接设置estimatedRowHeight配合AutoLayout即可实现自动高度，不用使用此类

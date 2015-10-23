@@ -26,11 +26,13 @@
 
 #pragma mark - 公开方法
 - (void)registerNibName:(NSString *)nibName reuseIdentifier:(NSString *)reuseInditifier forCellWithTableView:(UITableView *)tableView {
+    self.nibName = nibName;
 	self.reuseIdentifier = reuseInditifier;
 	[tableView registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:reuseInditifier];
 }
 -(void)registerClass:(Class)cls reuseIdentifier:(NSString *)reuseInditifier forCellWithTableView:(UITableView *)tableView{
     self.reuseIdentifier = reuseInditifier;
+    self.cellClass = cls;
     [tableView registerClass:cls forCellReuseIdentifier:reuseInditifier];
 }
 
