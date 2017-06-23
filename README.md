@@ -69,5 +69,4 @@ self.data = [[KCPersonService requestPersons] mutableCopy];
 
 ![](https://github.com/kenshincui/LightweightUITableView/blob/master/LightweightUITableViewDemo/LightweightUITableViewDemo/Resources/AutoHeightCell.gif?raw=true)
 
-## 博客
-欢迎访问本人博客：[Kenshin Cui's Blog](http://www.cnblogs.com/kenshincui/)
+
