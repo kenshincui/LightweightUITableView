@@ -35,6 +35,8 @@
 	[super viewDidLoad];
 
 	self.title = @"轻量级UITableView解决方案";
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;//让系统不要设置内边距 64才起作用
 	[self.view addSubview:self.tableView];
 
 	[self.tableView reloadData];
